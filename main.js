@@ -1,3 +1,8 @@
 $('.demo').click(function() {
-	$(this).changeFont('Helvetica', '1em');
+	$(this).changeFont({
+		fontFamily: 'Helvetica',
+		fontSize: '2em',
+		fontWeight: 'bold',
+		fontStyle: 'italic'
+	});
 });

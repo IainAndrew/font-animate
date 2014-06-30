@@ -1,5 +1,12 @@
 (function($) {
-	$.fn.changeFont = function(font, fontSize) {
+	$.fn.changeFont = function(options) {
+
+		defaults = $.extend ({
+            fontFamily: 'sans-serif',
+            fontSize: 'medium',
+            fontWeight: 'normal',
+            fontStyle: 'normal'
+		}, options );
 		
 		var $this = $(this),
 			$span = $this.children('span');
@@ -10,8 +17,10 @@
 
 		$after.html( $span.html() );
 		$after.css({
-			'font-family': font,
-			'font-size': fontSize
+			'font-family': options.fontFamily,
+			'font-size': options.fontSize,
+			'font-weight': options.fontWeight,
+			'font-style': options.fontStyle
 		});
 
 		$span.stop().animate({opacity:0}, {duration:1000});
