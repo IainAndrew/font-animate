@@ -1,7 +1,7 @@
-$('.demo').click(function() {
+$('.demo span').click(function() {
 	$(this).changeFont({
 		fontFamily: 'Helvetica',
-		fontSize: '2em',
+		fontSize: '1.5em',
 		fontWeight: 'bold',
 		fontStyle: 'italic'
 	});
