@@ -1,4 +1,10 @@
-span {
+span#test {
+	margin-left:10rem;
     font-size:3em;
     cursor:pointer;
+    position:fixed;
+}
+
+.thing {
+	color:red;
 }
