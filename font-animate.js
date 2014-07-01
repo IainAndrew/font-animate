@@ -1,5 +1,5 @@
 (function($) {
-	$.fn.changeFont = function(options) {
+	$.fn.fontAnimate = function(options) {
 
 		var $this = $(this);
 
@@ -20,19 +20,18 @@
 			position: 'relative'
 		});
 
-		$this.after('<span class="after"></span>');
+		//$this.after('<span class="font-animate-after"></span>');
+		$this.after( '<' + $this.prop('tagName') + ' class="font-animate-after"' + '></' + $this.prop('tagName') + '>' );
 
-		var $after = $this.siblings('.after');
-
-		var attributes = $this.prop("attributes");
+		var $after = $this.siblings('.font-animate-after'),
+			attributes = $this.prop("attributes");
 
 		// loop through attributes of $this and apply them to $after
 		$.each(attributes, function() {
 		    $after.attr(this.name, this.value);
 		});
 
-		$after.html( $this.html() );
-
+		$after.html($this.html()); // copy text from original element to new element
 		$after.css({
 			position: 'absolute',
 			top: 0,
@@ -48,10 +47,10 @@
 
 		$this.stop().animate({opacity:0}, options.duration || defaults.duration);
 		$after.stop().animate({opacity:1}, options.duration || defaults.duration, function() {
-			$after.unwrap();
-			$after.removeClass('after');
+			$after.unwrap(); // remove temporary wrapper ($wrap)
+			$after.removeClass('font-animate-after');
 			$after.css({
-				position: $this.css('position'),
+				position: $this.css('position'), // restore original position, top and left values
 				top: $this.css('top'),
 				left: $this.css('left')
 			});

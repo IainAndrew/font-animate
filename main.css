@@ -1,4 +1,5 @@
-span.test {
+h1.demo {
     font-size:5em;
     cursor:pointer;
+    margin:0;
 }
