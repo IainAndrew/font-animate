@@ -9,6 +9,7 @@
             fontWeight: $this.css('font-weight'),
             fontStyle: $this.css('font-style'),
             lineHeight: $this.css('line-height'),
+            letterSpacing: $this.css('letter-spacing'),
             duration: 1000
 		}, options );
 
@@ -41,7 +42,8 @@
 			'font-size': options.fontSize || defaults.fontSize,
 			'font-weight': options.fontWeight || defaults.fontWeight,
 			'font-style': options.fontStyle || defaults.fontStyle,
-			'line-height': options.lineHeight || defaults.lineHeight
+			'line-height': options.lineHeight || defaults.lineHeight,
+			'letter-spacing': options.letterSpacing || defaults.letterSpacing
 		});
 
 		$this.stop().animate({opacity:0}, options.duration || defaults.duration);
