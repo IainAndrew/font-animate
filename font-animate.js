@@ -1,15 +1,16 @@
 (function($) {
 	$.fn.changeFont = function(options) {
 
+		var $this = $(this);
+
 		defaults = $.extend ({
             fontFamily: 'sans-serif',
-            fontSize: 'medium',
-            fontWeight: 'normal',
-            fontStyle: 'normal',
+            fontSize: $this.css('font-size'),
+            fontWeight: $this.css('font-weight'),
+            fontStyle: $this.css('font-style'),
             duration: 1000
 		}, options );
 		
-		var $this = $(this)
 			/*$span = $this.children('span');
 
 		$span.after('<span class="after" style="position:absolute; top:0; left:0; opacity:0;"></span>');
