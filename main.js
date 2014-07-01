@@ -3,6 +3,6 @@ $('span#test').click(function() {
 		fontFamily: 'Helvetica',
 		fontSize: '3em',
 		fontWeight: 'bold',
-		duration: 1000
+		duration: 500
 	});
 });

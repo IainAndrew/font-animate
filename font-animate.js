@@ -47,14 +47,14 @@
 		});
 
 		$after.css({
-			'font-family': options.fontFamily,
-			'font-size': options.fontSize,
-			'font-weight': options.fontWeight,
-			'font-style': options.fontStyle
+			'font-family': options.fontFamily || defaults.fontFamily,
+			'font-size': options.fontSize || defaults.fontSize,
+			'font-weight': options.fontWeight || defaults.fontWeight,
+			'font-style': options.fontStyle || defaults.fontStyle
 		});
 
-		$this.stop().animate({opacity:0}, {duration:options.duration});
-		$after.stop().animate({opacity:1}, {duration:options.duration});
+		$this.stop().animate({opacity:0}, {duration:options.duration || defaults.duration});
+		$after.stop().animate({opacity:1}, {duration:options.duration || defaults.duration});
 
 	}
 }) (jQuery);
