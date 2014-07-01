@@ -8,6 +8,7 @@
             fontSize: $this.css('font-size'),
             fontWeight: $this.css('font-weight'),
             fontStyle: $this.css('font-style'),
+            lineHeight: $this.css('line-height'),
             duration: 1000
 		}, options );
 
@@ -39,7 +40,8 @@
 			'font-family': options.fontFamily || defaults.fontFamily,
 			'font-size': options.fontSize || defaults.fontSize,
 			'font-weight': options.fontWeight || defaults.fontWeight,
-			'font-style': options.fontStyle || defaults.fontStyle
+			'font-style': options.fontStyle || defaults.fontStyle,
+			'line-height': options.lineHeight || defaults.lineHeight
 		});
 
 		$this.stop().animate({opacity:0}, options.duration || defaults.duration);

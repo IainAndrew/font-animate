@@ -1,7 +1,8 @@
-$('span#test').click(function() {
+$('span.test').click(function() {
 	$(this).changeFont({
 		fontFamily: 'Helvetica',
-		fontWeight: 'bold',
+		fontSize: '4.6em',
+		lineHeight: '1.3em',
 		duration: 500
 	});
 });
