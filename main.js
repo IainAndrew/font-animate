@@ -1,5 +1,5 @@
 $('span.test').click(function() {
-	$(this).changeFont({
+	$(this).fontAnimate({
 		fontFamily: 'Helvetica',
 		fontSize: '4.6em',
 		lineHeight: '1.3em',
